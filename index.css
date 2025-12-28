@@ -1,0 +1,357 @@
+@import url('https://fonts.google.com/specimen/Rubik');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Purple shape in the background */
+.shape1{
+    width: 30%;
+    height: 90vh;
+    background: linear-gradient(to top right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-bottom-right-radius: 180px;
+    border-bottom-left-radius: 180px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Gray shape in the background */
+.shape2{
+    width: 25%;
+    height: 90vh;
+    background-color: hsl(270, 20%, 96%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border-top-right-radius: 180px;
+    border-top-left-radius: 180px;
+}
+
+/* Container */
+.container{
+    width: 840px;
+    height: 500px;
+    z-index: 2;
+    position: relative;
+    right: 2.5%;
+    display: flex;
+    margin: 0 10px;
+}
+
+.phone{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen{
+    width: 95%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+}
+
+/* Camera of the phone */
+.camera{
+    height: 5%;
+    background-color: white;
+    position: absolute;
+    width: 60%;
+    top: 5px;
+    border-radius: 30px;
+    left: 20%;
+}
+
+/* Header of the phone */
+.header{
+    width: 100%;
+    height: 12.5%;
+    background: linear-gradient(to top right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+.backIcon{
+    height: 50%;
+    width: 5%;
+    color: white;
+}
+
+.backIcon:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.profile{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    margin-left: 10px;
+}
+
+.profileImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.profileInfo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.profileName{
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.profileStatus{
+    color: hsl(260, 3%, 81%);
+    font-size: 12px;
+}
+
+.dotsIcon{
+    height: 50%;
+    width: 5%;
+    color: white;
+}
+
+.dotsIcon:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+/* Chat area of the phone */
+.chatArea{
+    width: 100%;
+    height: 87.5%;
+    padding: 10px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    background-color: hsl(270, 20%, 96%);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+/* Messages */
+.msg1, .msg2, .msg6{
+    width: 60%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: hsl(206, 6%, 79%);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.msg1, .msg2{
+    height: 8%;
+}
+
+.msg4, .msg5{
+    width: 60%;
+    height: 8%;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+
+.msg5{
+    width: 35%;
+}
+
+.msg1 p, .msg2 p, .msg6 p{
+    font-size: 9px;
+    color: hsl(276, 55%, 52%);
+}
+
+.msg4 p, .msg5 p{
+    font-size: 9px;
+    color: hsl(270, 7%, 64%);
+}
+
+.msg3{
+    width: 65%;
+    height: 10%;
+    border-radius: 10px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.msg3 img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* Texts on the right */
+.texts{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    width: 80%;
+    color: hsl(270, 7%, 64%);
+}
+
+/* Todo items */
+.todo1, .todo2{
+    width: 70%;
+    height: 10%;
+    background: linear-gradient(to top right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.todo2{
+    margin-bottom: 10px;
+}
+
+.todo1 i, .todo2 i{
+    color: white;
+    font-size: 12px;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.todo1 p, .todo2 p{
+    font-size: 10px;
+    color: white;
+}
+
+.todo1 h3, .todo2 h3{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Type message area */
+.typeChat{
+    width: 100%;
+    height: 10%;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.typeChatInput{
+    width: 85%;
+    height: 100%;
+    border: none;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.typeChat i{
+    font-size: 25px;
+    color:hsl(264, 90%, 20%);
+}
+
+.typeChat i:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+.typeChatInput:focus{
+    outline: none;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 860px){
+    body{
+        height: 800px;
+    }
+
+    .shape1, .shape2{
+        height: 50vh;
+    }
+
+    .container{
+        height: 800px;
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+        top: 50px;
+    }
+
+    .phone{
+        width: 85%;
+        margin-bottom: 20px;
+        height: 65%;
+    }
+
+    .texts{
+        width: 80%;
+        height: 35%;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .subtitle{
+        font-size: 14px;
+    }
+}
